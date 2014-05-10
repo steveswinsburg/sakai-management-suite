@@ -1,0 +1,35 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+	
+	<p><wicket:message key="summary.user.import.confirm.1">[summary.user.import.confirm.1]</wicket:message></p>
+	<p class="instruction"><wicket:message key="summary.user.import.confirm.2">[summary.user.import.confirm.2]</wicket:message></p>
+	
+	<table cellspacing="0" class="listHier lines">
+	    <tbody>
+			<tr>
+				<th><wicket:message key="header.user.eid">[header.user.eid]</wicket:message></th>
+				<th><wicket:message key="header.user.firstname">[header.user.firstname]</wicket:message></th>
+				<th><wicket:message key="header.user.lastname">[header.user.lastname]</wicket:message></th>
+				<th><wicket:message key="header.user.email">[header.user.email]</wicket:message></th>
+				<th><wicket:message key="header.user.password">[header.user.password]</wicket:message></th>
+				<th><wicket:message key="header.user.type">[header.user.type]</wicket:message></th>
+				<th><wicket:message key="header.user.properties">[header.user.properties]</wicket:message></th>
+			</tr>
+			<tr wicket:id="data">
+	         	<td><span wicket:id="eid">test34</span></td>
+				<td><span wicket:id="fname">Test</span></td>
+				<td><span wicket:id="lname">Name</span></td>
+				<td><span wicket:id="email">test@fake.com</span></td>
+				<td><span wicket:id="password">1q2w3e4r</span></td>
+				<td><span wicket:id="type">type</span></td>
+				<td><span wicket:id="properties">abc123</span></td>
+			</tr>
+	    </tbody>
+	</table>
+	
+	<form wicket:id="form">
+		<div class="act">
+			<input type="submit" wicket:msg="value:action.user.confirm"/>
+		</div>
+	</form>
+	
+</wicket:panel>

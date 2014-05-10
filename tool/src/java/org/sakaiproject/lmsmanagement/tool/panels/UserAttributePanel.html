@@ -1,0 +1,17 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+	
+	<wicket:enclosure child="attributes">
+		<p><strong><wicket:message key="header.user.properties">[header.user.properties]</wicket:message></strong></p>
+	</wicket:enclosure>
+
+	<div wicket:id="attributes">
+		<p class="shorttext">
+			<label wicket:for="attribute"> 
+				<span wicket:id="label">[Label]</span>
+			</label> 
+			<input type="text" wicket:id="attribute"/> 
+		</p>
+	</div>
+	
+</wicket:panel>
+

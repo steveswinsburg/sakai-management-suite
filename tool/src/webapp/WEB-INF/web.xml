@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	 version="2.4">
+
+	<display-name>sakai.lmsmanagement</display-name>
+
+	<servlet>
+		<servlet-name>sakai.lmsmanagement</servlet-name>
+	    <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+	    <init-param>
+	      	<param-name>applicationClassName</param-name>
+	      	<param-value>org.sakaiproject.lmsmanagement.tool.LMSManagementApp</param-value>
+	    </init-param>
+		<load-on-startup>1</load-on-startup>
+  	</servlet>
+	<servlet>
+		<servlet-name>sakai.newaccount</servlet-name>
+	    <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+	    <init-param>
+	      	<param-name>applicationClassName</param-name>
+	      	<param-value>org.sakaiproject.lmsmanagement.tool.sub.MyAccountApp</param-value>
+	    </init-param>
+		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	<servlet>
+		<servlet-name>sakai.myaccount</servlet-name>
+	    <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+	    <init-param>
+	      	<param-name>applicationClassName</param-name>
+	      	<param-value>org.sakaiproject.lmsmanagement.tool.sub.MyAccountApp</param-value>
+	    </init-param>
+		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+	<!-- Deploy mode -->
+	<context-param>
+            <param-name>configuration</param-name>
+            <param-value>deployment</param-value>
+            <!--  <param-value>development</param-value> -->
+	</context-param>
+
+	<filter>
+		<filter-name>sakai.request</filter-name>
+		<filter-class>org.sakaiproject.util.RequestFilter</filter-class>
+		
+		<!--  don't eat our uploads -->
+		<init-param>
+			<param-name>upload.enabled</param-name>
+			<param-value>false</param-value>
+      	</init-param>
+		
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>sakai.request</filter-name>
+		<servlet-name>sakai.lmsmanagement</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sakai.request</filter-name>
+		<servlet-name>sakai.newaccount</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sakai.request</filter-name>
+		<servlet-name>sakai.myaccount</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	
+	
+	<!-- Sakai Tool Listener -->
+	<listener>
+		<listener-class>org.sakaiproject.util.ToolListener</listener-class>
+	</listener>
+	
+	<!-- Sakai Spring Listener -->
+	<listener>
+		<listener-class>org.sakaiproject.util.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+
+</web-app>

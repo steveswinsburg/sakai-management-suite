@@ -1,0 +1,27 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+	
+	<p><wicket:message key="summary.membership.import.confirm.1">[summary.membership.import.confirm.1]</wicket:message></p>
+	<p class="instruction"><wicket:message key="summary.membership.import.confirm.2">[summary.membership.import.confirm.2]</wicket:message></p>
+	
+	<table cellspacing="0" class="listHier lines">
+	    <tbody>
+			<tr>
+				<th><wicket:message key="header.membership.siteid">[header.membership.siteid]</wicket:message></th>
+				<th><wicket:message key="header.membership.usereid">[header.membership.usereid]</wicket:message></th>
+				<th><wicket:message key="header.membership.role">[header.membership.role]</wicket:message></th>
+			</tr>
+			<tr wicket:id="data">
+	         	<td><span wicket:id="siteid">abcdef-1234-xxx</span></td>
+				<td><span wicket:id="usereid">jsmith26</span></td>
+				<td><span wicket:id="role">access</span></td>
+			</tr>
+	    </tbody>
+	</table>
+	
+	<form wicket:id="form">
+		<div class="act">
+			<input type="submit" wicket:msg="value:action.membership.confirm"/>
+		</div>
+	</form>
+	
+</wicket:panel>

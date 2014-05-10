@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<registration>
+	<tool id="sakai.myaccount" 
+		title="My account" 
+		description="Ultraline My Account tool">
+		
+		<category name="myworkspace" />
+		
+    </tool>
+</registration>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registration>
+	<tool id="sakai.newaccount" 
+		title="New account" 
+		description="Ultraline New Account tool">
+		
+    </tool>
+</registration>
+

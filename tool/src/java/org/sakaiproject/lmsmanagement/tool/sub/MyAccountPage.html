@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+ 
+<head>
+	<title><wicket:message key="page.title" /></title>
+</head>     
+<body>
+	<div class="portletBody">
+		
+		<h3 wicket:id="accountHeading">[heading here]</h3>
+		
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+		
+		<form wicket:id="form" class="user-form">
+		
+			<p class="shorttext">
+				<span class="reqStar">*</span>
+				<label wicket:for="eid"> 
+					<wicket:message key="header.user.eid">[header.user.eid]</wicket:message>
+				</label>
+				<input type="text" wicket:id="eid"/> 
+			</p>
+			<p class="shorttext">
+				<label wicket:for="fname"> 
+					<wicket:message key="header.user.firstname">[header.user.firstname]</wicket:message>
+				</label> 
+				<input type="text" wicket:id="fname"/> 
+			</p>
+			<p class="shorttext">
+				<label wicket:for="lname"> 
+					<wicket:message key="header.user.lastname">[header.user.lastname]</wicket:message>
+				</label>
+				<input type="text" wicket:id="lname"/> 
+			</p>
+			<p class="shorttext">
+				<label wicket:for="email"> 
+					<wicket:message key="header.user.email">[header.user.email]</wicket:message>
+				</label>
+				<input type="text" wicket:id="email"/> 
+			</p>
+			<p class="shorttext">
+				<span class="reqStar" wicket:id="password1Required">[*]</span>
+				<label wicket:for="password1"> 
+					<wicket:message key="header.user.password.create">[header.user.password.create]</wicket:message>
+				</label>
+				<input type="password" wicket:id="password1"/>
+			</p>
+			<p class="shorttext">
+				<span class="reqStar" wicket:id="password2Required">[*]</span>
+				<label wicket:for="password2"> 
+					<wicket:message key="header.user.password.verify">[header.user.password.verify]</wicket:message>
+				</label>
+				<input type="password" wicket:id="password2"/>
+			</p>
+			<p class="shorttext">
+				<label wicket:for="type"> 
+					<wicket:message key="header.user.type">[header.user.type]</wicket:message>
+				</label>
+				<input type="text" wicket:id="type"/> 
+			</p>
+			
+			<div wicket:id="attributes">panel for listing attributes</div>
+			
+			<div class="act">
+				<input type="submit"/>
+				<input type="reset" wicket:message="value:action.cancel"/>
+			</div>
+		
+		</form>
+		
+	
+	</div>	
+	
+</body>
+</html>

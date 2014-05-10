@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+
+<body>
+<wicket:panel>
+
+	<form wicket:id="form">
+		<wicket:message key="header.search">[header.search]</wicket:message>
+		<input type="text" wicket:id="search" />
+		<input type="submit" wicket:msg="value=action.search" />
+		<a wicket:id="reset"><wicket:message key="action.clear">[action.clear]</wicket:message></a>
+	</form>
+		
+	<table cellspacing="0" class="listHier lines">
+    <tbody>
+		<tr>
+			<th><wicket:message key="header.site.title">[header.site.title]</wicket:message></th>
+			<th><wicket:message key="header.site.members">[header.site.members]</wicket:message></th>
+			<th><wicket:message key="header.site.type">[header.site.type]</wicket:message></th>
+		</tr>
+    
+		<tr wicket:id="data">
+         	<td><span wicket:id="title">Mercury</span> (<span wicket:id=siteId>abc123</span>)</td>
+			<td><form wicket:id="form"><a wicket:id="viewMembers"><span wicket:id="members">57</span></a></form>
+			<div wicket:id="memberList"></div></td>
+			<td><span wicket:id="type">project</span></td>
+		</tr>
+		
+    </tbody>
+	</table>
+
+	<div wicket:id="navigator"></div>
+	
+	
+</wicket:panel>
+</body>
+</html>

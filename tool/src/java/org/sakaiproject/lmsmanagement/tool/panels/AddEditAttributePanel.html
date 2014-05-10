@@ -1,0 +1,25 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+
+	<h3><wicket:message key="header.attribute.addoredit">[header.attribute.addoredit]</wicket:message></h3>
+
+	<form wicket:id="form" class="attributes-form">
+		<p class="shorttext">
+			<label wicket:for="key"> 
+				<wicket:message key="header.attribute.key">[header.attribute.key]</wicket:message>
+			</label> 
+			<input type="text" wicket:id="key"/> 
+		</p>
+		<p class="shorttext">
+			<label wicket:for="value"> 
+				<wicket:message key="header.attribute.value">[header.attribute.value]</wicket:message>
+			</label> 
+			<input type="text" wicket:id="value"/> 
+			<p class="instruction"><wicket:message key="summary.attributes">[summary.attributes]</wicket:message></p>
+		</p>
+	
+		<div class="act">
+			<input type="submit" />
+		</div>
+	</form>
+	
+</wicket:panel>

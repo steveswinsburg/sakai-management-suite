@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+
+<body>
+<wicket:extend>
+		
+	<h2><wicket:message key="heading.page.attributes">[heading.page.attributes]</wicket:message></h2>
+	
+	<table cellspacing="0" class="listHier lines">
+	<tbody>
+		<tr>
+			<th><wicket:message key="header.attribute.key">[header.attribute.key]</wicket:message></th>
+			<th><wicket:message key="header.attribute.value">[header.attribute.value]</wicket:message></th>
+			<th>&nbsp;</th>
+		</tr>
+    
+		<tr wicket:id="data">
+			<td><form wicket:id="edit"><a wicket:id="editAttribute"><span wicket:id="key">Attribute Key</span></a></form></td>
+			<td><span wicket:id="value">Attribute Value</span></td>
+			<td><form wicket:id="remove"><a wicket:id="removeAttribute"><img src="/library/image/silk/cross.png" wicket:message="alt:summary.attribute.remove" /></a></form></td>
+		</tr>
+       
+    </tbody>
+	</table>
+		
+	<div wicket:id="addEditAttributePanel"></div>
+	
+</wicket:extend>
+</body>
+</html>
